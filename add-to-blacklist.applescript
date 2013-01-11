@@ -5,8 +5,6 @@ Apple Mail -- Text File Exporter w/ Basic Header Info.
 Version 1.0
 April 17, 2011
 *)
-set commonScript to load script alias ¬
-    ((path to library folder from user domain as string) & "Scripts:Grep_Find_All.scpt")
 
 property appName : "Mail"
 property successCount : "0"
