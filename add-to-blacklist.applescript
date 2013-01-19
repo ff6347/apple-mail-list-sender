@@ -34,7 +34,7 @@ tell application "Mail"
 	end repeat
 	
 	set theResult to myList as string
-
+	
 	set AppleScript's text item delimiters to _delimiters
 	
 	
@@ -45,7 +45,8 @@ tell application "Mail"
 	write (return & theResult) to theFileReference as Çclass utf8È starting at eof
 	close access theFileReference
 	set successCount to successCount + 1
-
+	
 	set resultstring to do shell script "grep -EiEio '\\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,4}\\b' " & p_path
 	do shell script "echo " & resultstring & " > " & p_path
+	display dialog resultstring
 end tell
